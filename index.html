@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>KIAN & KEITH FOODIES</title>
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+body { font-family: 'Segoe UI', sans-serif; }
+.hero {
+  background: url('images/photoo.jpg') center/cover no-repeat;
+  height: 75vh;
+  display:flex; align-items:center; justify-content:center;
+  color:white; text-align:center;
+}
+.hero-overlay {
+  background: rgba(0,0,0,0.6);
+  padding:40px; border-radius:10px;
+}
+.section-title { font-weight:700; }
+.card:hover { transform:translateY(-5px); transition:0.3s; }
+footer { background:#111; color:white; }
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid gold;
+  box-shadow: 0 0 8px rgba(255,215,0,0.6);
+}
+.hero-logo {
+  width: 180px;
+  height: 180px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 4px solid white;
+  box-shadow: 0 0 15px rgba(0,0,0,0.4);
+}
+.hero-logo {
+  transition: transform 0.3s ease;
+}
+
+.hero-logo:hover {
+  transform: scale(1.08);
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="images/logo.jpg" alt="Logo" class="logo">
+  <span class="fw-bold text-white ms-2">K&K Foodies</span>
+</a>
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link active" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item"><a class="nav-link" href="menu.html">Our Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="location.html">Visit Us</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<section class="hero">
+  <div class="hero-overlay text-center">
+
+    <!-- LOGO -->
+    <img src="images/logo.jpg" class="hero-logo mb-3">
+
+    <h1 class="display-4 fw-bold">KIAN & KEITH FOODIES</h1>
+    <p class="lead">Authentic Filipino Cuisine</p>
+    <a href="menu.html" class="btn btn-warning">Explore Menu</a>
+
+  </div>
+</section>
+
+<section class="container my-5 text-center">
+<h2 class="section-title">Experience Filipino Flavors</h2>
+<p class="lead">Delicious home-style meals made fresh daily.</p>
+</section>
+
+<section class="container my-5">
+<h2 class="text-center section-title mb-4">Featured Dishes</h2>
+
+<div class="row g-4">
+<div class="col-md-4">
+<div class="card shadow">
+<img src="images/photoo2.jpg" class="card-img-top">
+<div class="card-body text-center"><h5>Salpicão</h5></div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="images/photoo3.jpg" class="card-img-top">
+<div class="card-body text-center"><h5>Asado</h5></div>
+</div>
+</div>
+
+<div class="col-md-4">
+<div class="card shadow">
+<img src="images/photoo4.jpg" class="card-img-top">
+<div class="card-body text-center"><h5>Chicken Barbeque</h5></div>
+</div>
+</div>
+</div>
+</section>
+
+<footer class="text-center py-4">
+<p>&copy; 2026 KIAN & KEITH FOODIES</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>

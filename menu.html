@@ -1,0 +1,251 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Our Menu - K&K Foodies</title>
+
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+
+<style>
+html, body {
+  height: 100%;
+}
+
+body { 
+  font-family: 'Segoe UI', sans-serif;
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+
+  background: 
+    linear-gradient(rgba(255,255,255,0.92), rgba(255,255,255,0.92)),
+    url("https://images.unsplash.com/photo-1540189549336-e6e99c3679fe?auto=format&fit=crop&w=1500&q=80");
+
+  background-size: cover;
+  background-attachment: fixed;
+  background-position: center;
+}
+
+/* MAIN PUSHES FOOTER DOWN */
+main {
+  flex: 1;
+}
+
+.menu-box {
+  background: #fff;
+  padding: 30px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+.menu-title {
+  text-align: center;
+  font-weight: bold;
+  color: #e74c3c;
+}
+
+.menu-item {
+  cursor: pointer;
+  padding: 10px;
+  border-bottom: 1px solid #ddd;
+}
+
+.menu-item:hover {
+  background: #f8f9fa;
+}
+
+/* FOOTER FIX */
+footer {
+  background: #111;
+  color: white;
+  text-align: center;
+  padding: 20px;
+}
+
+.logo {
+  width: 45px;
+  height: 45px;
+  border-radius: 50%;
+  object-fit: cover;
+  border: 2px solid gold;
+  box-shadow: 0 0 8px rgba(255,215,0,0.6);
+}
+</style>
+</head>
+
+<body>
+
+<!-- NAVBAR -->
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
+<div class="container">
+<a class="navbar-brand d-flex align-items-center" href="index.html">
+  <img src="images/logo.jpg" alt="Logo" class="logo">
+  <span class="fw-bold text-white ms-2">K&K Foodies</span>
+</a>
+
+<button class="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#nav">
+<span class="navbar-toggler-icon"></span>
+</button>
+
+<div class="collapse navbar-collapse" id="nav">
+<ul class="navbar-nav ms-auto">
+<li class="nav-item"><a class="nav-link" href="index.html">Home</a></li>
+<li class="nav-item"><a class="nav-link" href="about.html">About Us</a></li>
+<li class="nav-item"><a class="nav-link active" href="menu.html">Our Menu</a></li>
+<li class="nav-item"><a class="nav-link" href="gallery.html">Gallery</a></li>
+<li class="nav-item"><a class="nav-link" href="location.html">Visit Us</a></li>
+</ul>
+</div>
+</div>
+</nav>
+
+<!-- MENU -->
+<main class="container my-5">
+
+<div class="row">
+
+<!-- LEFT: CHICKEN -->
+<div class="col-md-3 mb-4">
+<div class="menu-box">
+
+<h5 class="menu-title">Chicken Menu</h5>
+
+<p class="text-center fw-bold mb-2">Tray Prices</p>
+<p class="text-center small">
+XL (50 pax) - ₱2,500 <br>
+Large (35 pax) - ₱1,700 <br>
+Medium (25 pax) - ₱1,300
+</p>
+
+<div class="menu-item" onclick="openOrder('Chicken Asado')">• Asado</div>
+<div class="menu-item" onclick="openOrder('Chicken Caldereta')">• Caldereta</div>
+<div class="menu-item" onclick="openOrder('Chicken Fillet')">• Chicken Fillet</div>
+<div class="menu-item" onclick="openOrder('Chicken BBQ')">• Chicken BBQ</div>
+<div class="menu-item" onclick="openOrder('Chicken Curry')">• Chicken Curry</div>
+<div class="menu-item" onclick="openOrder('Fried Chicken')">• Fried Chicken</div>
+
+</div>
+</div>
+
+<!-- CENTER -->
+<div class="col-md-6 mb-4">
+<div class="menu-box">
+
+<h2 class="menu-title">Kian-Keith Foodies</h2>
+<p class="text-center text-muted">Food Bilao Package</p>
+<p class="text-center"><strong>Click an item to order</strong></p>
+
+<div class="menu-item" onclick="openOrder('Palabok - ₱700')">• Palabok - ₱700</div> <div class="menu-item" onclick="openOrder('Pancit Guisado - ₱700')">• Pancit Guisado - ₱700</div> <div class="menu-item" onclick="openOrder('Pancit Canton - ₱700')">• Pancit Canton - ₱700</div> <div class="menu-item" onclick="openOrder('Carbonara - ₱800')">• Carbonara - ₱800</div> <div class="menu-item" onclick="openOrder('Baked Mac - ₱800')">• Baked Mac - ₱800</div> <div class="menu-item" onclick="openOrder('Spaghetti - ₱700')">• Spaghetti - ₱700</div> <div class="menu-item" onclick="openOrder('Puto Cheese - ₱400')">• Puto Cheese (50 pcs) - ₱400</div> <div class="menu-item" onclick="openOrder('Puto Flan - ₱700')">• Puto Flan (50 pcs) - ₱700</div>
+
+</div>
+</div>
+
+<!-- RIGHT: BEEF -->
+<div class="col-md-3 mb-4">
+<div class="menu-box">
+
+<h5 class="menu-title">Beef Menu</h5>
+
+<p class="text-center fw-bold mb-2">Tray Prices</p>
+<p class="text-center small">
+XL (50 pax) - ₱3,000 <br>
+Large (35 pax) - ₱2,500 <br>
+Medium (25 pax) - ₱2,000
+</p>
+
+<div class="menu-item" onclick="openOrder('Beef Caldereta')">• Caldereta</div>
+<div class="menu-item" onclick="openOrder('Beef Asado')">• Asado</div>
+<div class="menu-item" onclick="openOrder('Beef Broccoli')">• Beef Broccoli</div>
+<div class="menu-item" onclick="openOrder('Kare-Kare')">• Kare-Kare</div>
+
+</div>
+</div>
+
+</div>
+
+</main>
+
+<!-- ORDER POPUP -->
+<div class="modal fade" id="orderModal">
+  <div class="modal-dialog">
+    <div class="modal-content">
+
+      <div class="modal-header">
+        <h5 class="modal-title">Place Your Order</h5>
+        <button class="btn-close" data-bs-dismiss="modal"></button>
+      </div>
+
+      <div class="modal-body">
+
+        <input id="name" class="form-control mb-2" placeholder="Name">
+        <input id="contact" class="form-control mb-2" placeholder="Contact Number">
+        <input id="location" class="form-control mb-2" placeholder="Location">
+        <input id="date" type="date" class="form-control mb-2">
+
+        <select id="size" class="form-control mb-2">
+          <option value="">Select Tray Size</option>
+          <option value="XL - 50 pax">XL - 50 pax</option>
+          <option value="Large - 35 pax">Large - 35 pax</option>
+          <option value="Medium - 25 pax">Medium - 25 pax</option>
+        </select>
+
+        <input id="order" class="form-control mb-2" readonly>
+
+        <button class="btn btn-success w-100" onclick="submitOrder()">Submit Order</button>
+
+      </div>
+
+    </div>
+  </div>
+</div>
+
+<!-- FOOTER -->
+<footer>
+<p class="mb-0">&copy; 2026 KIAN & KEITH FOODIES</p>
+</footer>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+
+<script>
+const API_URL = "https://script.google.com/macros/s/AKfycbwxSsnDnUfAO_29tJla3nv4RdKxhlU9UeBd4JCHo7x7llSyqxWOP8ZTovSSMcmoYHca/exec";
+
+let modal = new bootstrap.Modal(document.getElementById("orderModal"));
+
+function openOrder(item) {
+  document.getElementById("order").value = item;
+  modal.show();
+}
+
+function submitOrder() {
+
+  let data = {
+    name: document.getElementById("name").value,
+    contact: document.getElementById("contact").value,
+    location: document.getElementById("location").value,
+    date: document.getElementById("date").value,
+    size: document.getElementById("size").value,
+    order: document.getElementById("order").value
+  };
+
+fetch(API_URL, {
+  method: "POST",
+  body: JSON.stringify(data)
+})
+.then(res => res.text())
+.then(res => {
+  console.log(res);
+  alert("Order sent successfully!");
+  modal.hide();
+})
+.catch(err => {
+  console.log("FETCH ERROR:", err);
+  alert("Error sending order");
+});
+
+}
+
+</script>
+
+</body>
+</html>
